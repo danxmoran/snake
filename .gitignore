@@ -1,0 +1,13 @@
+main
+test
+input/*.snake
+output/*.o
+output/*.run
+output/*.s
+output/*.dSYM
+*.sw*
+*~
+*.o
+*.log
+_build/*
+.merlin
