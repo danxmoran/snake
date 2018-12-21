@@ -23,14 +23,15 @@ Toy compiler and runtime from the Compilers class at Northeastern, targeting x86
 * Conditional branching with `if`-`else`
 * Local variable bindings with `let` (lexical scope)
 * Simple typechecking, with Hindley-Milner type inference and support for explicit annotations
-* Tail-call elimination for recursion and mutual recursion
+* Tail-call elimination
+* Recursive and mutually-recursive lambda definitions
 * Semispace gargage collection using Cheney's algorithm
 * Simple optimizations:
     * Constant folding
     * Common subexpression elimination
     * Dead assignment elimination
 
-See [`test.ml`](test.ml) for examples, along with examples of error-handling.
+See [`test.ml`](test.ml) for examples, along with examples of error-flagging.
 
 ## Setting up
 
@@ -49,7 +50,8 @@ $ make test && ./test
 ```
 
 NOTE: A number of tests will be auto-skipped on OS X. They depend on Valgrind,
-which still doesn't seem to work properly on Macs.
+which still doesn't seem to work properly on Macs. Everything should work on
+Ubuntu (provided valgrind is installed).
 
 ## Running
 
